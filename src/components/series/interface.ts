@@ -1,6 +1,11 @@
 export default interface iSeries {
-  id: string;
-  thumbnailUrl: string;
-  name: string;
-  rating?: number;
+  show: {
+    id: number;
+    url: string;
+    name: string;
+    image?: {
+      medium: string;
+      original: string;
+    };
+  };
 }

@@ -1,0 +1,36 @@
+.inputfieldWrapper {
+  padding-top: 3rem;
+}
+.inputfield {
+  width: 50%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  border: solid 3px #00a496;
+}
+.showsWrapper {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.show {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .showsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0 2rem 0;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 480px) {
+  .showsWrapper {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 0 2rem 0;
+  }
+  .show {
+    margin: 2rem 0 2rem 0;
+  }
+}

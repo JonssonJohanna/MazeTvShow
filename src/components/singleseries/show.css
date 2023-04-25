@@ -1,0 +1,26 @@
+.showWrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.image {
+  padding: 0 3rem 0 3rem;
+}
+.buttonBack {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  width: 10rem;
+  height: 2rem;
+}
+
+@media screen and (min-width: 250px) and (max-width: 480px) {
+  .image {
+    max-width: 250px;
+  }
+  .showWrapper {
+    padding: 1rem;
+  }
+}

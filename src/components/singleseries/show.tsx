@@ -2,15 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
-type iShow = {
-  name: string;
-  language: string;
-  summary: string;
-  image?: {
-    original: string;
-  };
-};
+import './show.css';
+import iShow from './interface';
 
 const Show = () => {
   const [singleShow, setSingleShow] = useState<iShow>();
@@ -41,12 +34,15 @@ const Show = () => {
   }
   return (
     <div>
-      <h1>Single serie page</h1>
-      <p>{singleShow.name}</p>
-      <div dangerouslySetInnerHTML={{ __html: singleShow.summary }}></div>
-
-      <img src={singleShow.image?.original} alt='tv show' />
-      <button onClick={goBack}>Back</button>
+      <button className='buttonBack' onClick={goBack}>
+        Back to search results
+      </button>
+      <div className='showWrapper'>
+        <h2>{singleShow.name}</h2>
+        <p>Language {singleShow.language}</p>
+        <div dangerouslySetInnerHTML={{ __html: singleShow.summary }}></div>
+        <img className='image' src={singleShow.image?.original} alt='tv show' />
+      </div>
     </div>
   );
 };
